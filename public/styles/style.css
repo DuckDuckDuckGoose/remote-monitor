@@ -8,22 +8,22 @@ body {
 }
 
 .module {
-  width: min(30vw, 30vh);
   min-width: 180px;
+  width: min(30vw, 30vh);
+  max-width: 400px;
   height: min(30vw, 30vh);
-  min-height: 180px;
+  max-height: 400px;
   background: #D9F0FF;
   border-radius: min(2vw, 2vh);
   padding: min(2vw, 2vh);
   margin: min(1vw, 1vh);
 }
-
-.graph {
+.module-line {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
-.graph-canvas {
+.canvas-line {
   width: 100%;
   height: 100%;
 }

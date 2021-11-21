@@ -25,4 +25,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, `public/index.html`))
 })
 
-httpServer.listen(3000);
+httpServer.listen(3000, () => {
+  console.log(`Server listening on port: 3000`)
+});
