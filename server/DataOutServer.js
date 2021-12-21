@@ -9,12 +9,7 @@ class DataOutServer {
 
     this.app = express();
     this.httpServer = createServer(this.app);
-    this.io = new Server({
-      cors: {
-        origin: `http://localhost`,
-        methods: [`GET`, `POST`]
-      }
-    });
+    this.io = new Server(this.httpServer, {});
 
     this.sockets = {};
 
