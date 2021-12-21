@@ -1,2 +1,0 @@
-\PhysicalDisk(*)\Disk Read Bytes/sec
-\Processor(*)\% Processor Time
