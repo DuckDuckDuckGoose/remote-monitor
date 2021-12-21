@@ -1,7 +1,7 @@
 {
   "name": "remote-monitor",
   "version": "1.0.0",
-  "description": "",
+  "description": "Allows remote monitoring of devices on a local network",
   "main": "main.js",
   "scripts": {
     "test": "node main.js"
@@ -10,14 +10,19 @@
     "type": "git",
     "url": "git+https://github.com/DuckDuckDuckGoose/remote-monitor.git"
   },
-  "author": "DuckDuckDuckGoose",
+  "keywords": [
+    "monitoring"
+  ],
+  "author": "duck",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DuckDuckDuckGoose/remote-monitor/issues"
   },
   "homepage": "https://github.com/DuckDuckDuckGoose/remote-monitor#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "socket.io": "^4.4.0"
+    "express": "^4.17.2",
+    "node-os-utils": "^1.3.5",
+    "socket.io": "^4.4.0",
+    "socket.io-client": "^4.4.0"
   }
 }
