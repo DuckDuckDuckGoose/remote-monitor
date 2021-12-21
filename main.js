@@ -1,4 +1,5 @@
 const {spawn} = require(`child_process`);
+const fs = require(`fs`);
 
 const express = require("express");
 const { createServer } = require("http");
@@ -76,6 +77,21 @@ function segmentParser(segment) {
 
 function sendDataPacket(segmentObj) {
   io.emit(`dataPacket`, segmentObj);
+}
+
+function getCounters() {
+  return new Promise(async (resolve, reject) => {
+    let data = fs.readFileSync(`./counters.txt`).toString();
+    let counters = data.split(`\r\n`).filter((str) => str.length > 0);
+    resolve(counters);
+  })
+}
+
+function createCommand() {
+  return new Promise(async(resolve, reject) => {
+    let counters = await getCounters();
+    let command = `Get-Counter ` + counters.map((str) => `"${str}"`).join(`, `)
+  })
 }
 
 
